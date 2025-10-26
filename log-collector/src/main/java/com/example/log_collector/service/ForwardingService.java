@@ -11,7 +11,7 @@ public class ForwardingService {
     private final WebClient webClient;
 
     // Central log server URL from application.properties
-    public ForwardingService(@Value("${logserver.url}") String logServerUrl) {
+    public ForwardingService(@Value("${log_server.url}") String logServerUrl) {
         this.webClient = WebClient.builder()
                 .baseUrl(logServerUrl)
                 .build();

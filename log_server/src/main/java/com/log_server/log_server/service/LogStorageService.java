@@ -24,6 +24,12 @@ public class LogStorageService {
     public Mono<Void> saveLog(String logJson) {
         return Mono.fromRunnable(() -> {
             try {
+                // Ensure parent directory exists
+                Path parentDir = LOG_FILE.getParent();
+                if (parentDir != null && !Files.exists(parentDir)) {
+                    Files.createDirectories(parentDir);
+                }
+
                 Files.writeString(LOG_FILE, logJson + System.lineSeparator(),
                         StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             } catch (IOException e) {
@@ -31,6 +37,7 @@ public class LogStorageService {
             }
         });
     }
+
 
     public Flux<LogEntity> getLogs(Optional<String> service, Optional<String> level,
                                    Optional<String> username, Optional<Boolean> isBlacklisted,
