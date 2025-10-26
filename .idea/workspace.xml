@@ -1,27 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="861b786b-97e3-4b79-b918-e3218dcebd2a" name="Changes" comment="" />
+    <list default="true" id="861b786b-97e3-4b79-b918-e3218dcebd2a" name="Changes" comment="initial config">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/blacklist/BlacklistChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/config/CollectorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/metrics/MetricsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/model/ParsedLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/service/ForwardingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/service/LogParserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/service/TcpUdpListenerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/config/ClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/controller/MetricsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/model/LogMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/service/LogGeneratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/service/MetricsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/service/TcpUdpSenderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/util/LogFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-collector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log-collector/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-collector/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log-collector/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/windows-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/WindowsClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/windows-client/src/main/java/com/example/windows_client/WindowsClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows-client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/windows-client/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
   <component name="ProjectId" id="34acXqcuoHPk02RGOJidgEGx1cR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.LogCollectorApplication.executor": "Run",
+    "Application.WindowsClientApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/klins/OneDrive/Desktop/Assign_MotaData/log-collector/src/main/java/com/example/log_collector"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\log-collector\src\main\java\com\example\log_collector" />
+      <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\windows-client\src\main\java\com\example\windows_client\util" />
+      <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\windows-client\src\main\java\com\example\windows_client\service" />
+      <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\windows-client\src\main\java\com\example\windows_client\model" />
+      <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\windows-client\src\main\java\com\example\windows_client\controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LogServerApplication">
+    <configuration name="LogCollectorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.log_collector.LogCollectorApplication" />
+      <module name="log-collector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.log_collector.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.log_server.log_server.LogServerApplication" />
+      <module name="log_server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.log_server.log_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WindowsClientApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.windows_client.WindowsClientApplication" />
+      <module name="windows-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.windows_client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LogServerApplication" />
+        <item itemvalue="Application.LogCollectorApplication" />
+        <item itemvalue="Application.WindowsClientApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,6 +131,19 @@
       <option name="presentableId" value="Default" />
       <updated>1761455167463</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial config">
+      <option name="closed" value="true" />
+      <created>1761455701284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761455701284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial config" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial config" />
   </component>
 </project>
