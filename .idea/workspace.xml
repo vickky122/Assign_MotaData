@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861b786b-97e3-4b79-b918-e3218dcebd2a" name="Changes" comment="microservices part">
+    <list default="true" id="861b786b-97e3-4b79-b918-e3218dcebd2a" name="Changes" comment="logs.jsonl file generation">
+      <change afterPath="$PROJECT_DIR$/log-collector/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log_server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/service/ForwardingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/service/ForwardingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-collector/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log-collector/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_server/src/main/java/com/log_server/log_server/service/LogStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/log_server/src/main/java/com/log_server/log_server/service/LogStorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows-client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/windows-client/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/logs.jsonl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,20 +33,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.LogCollectorApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LogServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WindowsClientApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/klins/OneDrive/Desktop/Assign_MotaData/log_server/src/main/java/com/log_server/log_server&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.LogCollectorApplication.executor": "Run",
+    "Application.LogServerApplication.executor": "Run",
+    "Application.WindowsClientApplication.executor": "Run",
+    "Docker.log_server/Dockerfile.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/klins/OneDrive/Desktop/Assign_MotaData/log_server/src/main/java/com/log_server/log_server"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\log_server\src\main\java\com\log_server\log_server" />
@@ -56,7 +57,7 @@
       <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\windows-client\src\main\java\com\example\windows_client\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WindowsClientApplication">
+  <component name="RunManager" selected="Docker.log_server/Dockerfile">
     <configuration name="LogCollectorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.log_collector.LogCollectorApplication" />
       <module name="log-collector" />
@@ -96,11 +97,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="log_server/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="log_server/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.log_server/Dockerfile" />
         <item itemvalue="Application.WindowsClientApplication" />
-        <item itemvalue="Application.LogCollectorApplication" />
         <item itemvalue="Application.LogServerApplication" />
+        <item itemvalue="Application.LogCollectorApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -129,12 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1761457082869</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="logs.jsonl file generation">
+      <option name="closed" value="true" />
+      <created>1761479056558</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761479056558</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial config" />
     <MESSAGE value="microservices part" />
-    <option name="LAST_COMMIT_MESSAGE" value="microservices part" />
+    <MESSAGE value="logs.jsonl file generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="logs.jsonl file generation" />
   </component>
 </project>
