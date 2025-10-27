@@ -4,20 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861b786b-97e3-4b79-b918-e3218dcebd2a" name="Changes" comment="logs.jsonl file generation">
-      <change afterPath="$PROJECT_DIR$/log-collector/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log_server/Dockerfile" afterDir="false" />
+    <list default="true" id="861b786b-97e3-4b79-b918-e3218dcebd2a" name="Changes" comment="docker connectivity">
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log-collector/src/main/java/com/example/log_collector/service/LogParserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log_server/src/main/java/com/log_server/log_server/service/LogStorageServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-collector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log-collector/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-collector/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log-collector/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log_server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log_server/src/main/java/com/log_server/log_server/service/LogStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/log_server/src/main/java/com/log_server/log_server/service/LogStorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/logs.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log_server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vickky122&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7187aacf-2a4b-491a-8821-eb69b432eb36" />
+        <option name="url" value="https://github.com/vickky122/Assign_MotaData.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,6 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.LogParserServiceTest.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/klins/OneDrive/Desktop/Assign_MotaData/log_server/src/main/java/com/log_server/log_server"
@@ -57,7 +84,7 @@
       <recent name="C:\Users\klins\OneDrive\Desktop\Assign_MotaData\windows-client\src\main\java\com\example\windows_client\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.log_server/Dockerfile">
+  <component name="RunManager" selected="Application.LogServerApplication">
     <configuration name="LogCollectorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.log_collector.LogCollectorApplication" />
       <module name="log-collector" />
@@ -97,8 +124,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LogParserServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="log-collector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.log_collector.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.log_collector.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.log_collector.service.LogParserServiceTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="log_server/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -111,10 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.log_server/Dockerfile" />
-        <item itemvalue="Application.WindowsClientApplication" />
         <item itemvalue="Application.LogServerApplication" />
+        <item itemvalue="Application.WindowsClientApplication" />
         <item itemvalue="Application.LogCollectorApplication" />
+        <item itemvalue="TestNG.LogParserServiceTest" />
+        <item itemvalue="Docker.log_server/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -151,13 +198,22 @@
       <option name="project" value="LOCAL" />
       <updated>1761479056558</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="docker connectivity">
+      <option name="closed" value="true" />
+      <created>1761501552053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761501552053</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial config" />
     <MESSAGE value="microservices part" />
     <MESSAGE value="logs.jsonl file generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="logs.jsonl file generation" />
+    <MESSAGE value="docker connectivity" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker connectivity" />
   </component>
 </project>

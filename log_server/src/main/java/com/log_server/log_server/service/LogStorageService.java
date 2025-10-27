@@ -1,58 +1,61 @@
 package com.log_server.log_server.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.log_server.log_server.model.LogEntity;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.util.Optional;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Stream;
-import reactor.core.publisher.Flux;
-import com.log_server.log_server.model.LogEntity;
+import java.nio.file.Paths;
+import java.nio.file.Path;
+
 
 @Service
 public class LogStorageService {
 
-    private static final Path LOG_FILE = Paths.get("logs.jsonl");
+    private Path logFile = Paths.get("target/logs.jsonl");
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    // Save incoming JSON (compact it to a single line) -> write on boundedElastic
+    // Save incoming JSON log to file (one line per entry)
     public Mono<Void> saveLog(String logJson) {
         return Mono.fromRunnable(() -> {
             try {
-                // Compact JSON to one line (handle pretty or one-line input)
                 String compact;
                 try {
                     compact = objectMapper.writeValueAsString(objectMapper.readTree(logJson));
                 } catch (Exception ex) {
-                    // Fallback: if invalid JSON, just flatten line breaks
                     compact = logJson.replaceAll("\\r?\\n", " ");
                 }
 
-                // Ensure parent directory exists
-                Path parent = LOG_FILE.getParent();
+                Path parent = logFile.getParent();
                 if (parent != null && !Files.exists(parent)) {
                     Files.createDirectories(parent);
                 }
 
-                Files.writeString(LOG_FILE, compact + System.lineSeparator(),
+                Files.writeString(logFile, compact + System.lineSeparator(),
                         StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             } catch (IOException e) {
                 throw new RuntimeException("Failed to write log", e);
             }
-        }).subscribeOn(reactor.core.scheduler.Schedulers.boundedElastic()).then();
+        }).subscribeOn(Schedulers.boundedElastic()).then();
     }
 
-
-    // existing getLogs (you already have this) - no change required here
+    // Read logs with optional filters
     public Flux<LogEntity> getLogs(Optional<String> service, Optional<String> level,
                                    Optional<String> username, Optional<Boolean> isBlacklisted,
                                    Optional<Integer> limit) {
+        if (!Files.exists(logFile)) {
+            return Flux.empty();
+        }
+
         return Flux.using(
-                () -> Files.lines(LOG_FILE),
+                () -> Files.lines(logFile),
                 lines -> Flux.fromStream(lines.map(line -> {
                                     try {
                                         return objectMapper.readValue(line, LogEntity.class);
@@ -68,5 +71,14 @@ public class LogStorageService {
                 ),
                 Stream::close
         );
+    }
+
+    // Used for testing (custom file path)
+    public LogStorageService(String customPath) {
+        this.logFile = Paths.get(customPath);
+    }
+
+    // Default constructor for Spring
+    public LogStorageService() {
     }
 }
